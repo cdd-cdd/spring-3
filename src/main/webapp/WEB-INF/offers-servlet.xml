@@ -27,5 +27,8 @@
 	
 	<mvc:resources location="/resources/" mapping="/static/**"></mvc:resources>
 
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+      <property name="basename" value="springmvc.com.able.messages.messages"></property>
+    </bean>
 
 </beans>

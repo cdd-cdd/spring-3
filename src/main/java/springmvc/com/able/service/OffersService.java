@@ -8,12 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import springmvc.com.able.dao.Offer;
-import springmvc.com.able.dao.OffersDAO;
+import springmvc.com.able.dao.OffersDao;
 
 @Service("offersServices")
 public class OffersService {
 	
-	private OffersDAO offersDao;
+	private OffersDao offersDao;
 	
 	
 	
@@ -23,14 +23,14 @@ public class OffersService {
 
 
 
-	public OffersDAO getOffersDao() {
+	public OffersDao getOffersDao() {
 		return offersDao;
 	}
 
 
 
 	@Autowired
-	public void setOffersDao(OffersDAO offersDao) {
+	public void setOffersDao(OffersDao offersDao) {
 		this.offersDao = offersDao;
 	}
 

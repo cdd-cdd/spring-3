@@ -18,12 +18,12 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 @Component("offersDao")
-public class OffersDAO {
+public class OffersDao {
 
 	// private JdbcTemplate jdbc;
 	private NamedParameterJdbcTemplate jdbc;
 	
-	public OffersDAO() {
+	public OffersDao() {
 		System.out.println("Successfully loaded offers DAO");
 	}
 
