@@ -1,5 +1,7 @@
 package springmvc.com.able.controllers;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,7 +54,7 @@ public class LoginController {
         	
         }
         
-        user.setAuthority("user");
+        user.setAuthority("ROLE_USER");
         user.setEnabled(true);
         
         if(usersService.exist(user.getUsername())) {
@@ -77,5 +79,23 @@ public class LoginController {
 		this.usersService = usersService;
 	}
 	
+	@RequestMapping("/denied")
+	public String showDenied(Model model) {
+		
+
+		
+		return "denied";
+	}
+	
+	@RequestMapping("/admin")
+	public String showAdmin(Model model) {
+		
+		List<User> users = usersService.getAllUsers();
+		
+		model.addAttribute("users", users);
+		
+		return "admin";
+	}
    //new UsernamePasswordAuthenticationFilter()
+	// new StandardPasswordEncoder()
 }
