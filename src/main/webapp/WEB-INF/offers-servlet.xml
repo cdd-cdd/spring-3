@@ -20,9 +20,22 @@
 		base-package="springmvc.com.able.controllers"></context:component-scan>
 	<mvc:annotation-driven></mvc:annotation-driven>
 	
-	<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<!-- 	<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 	   <property name="prefix" value="/WEB-INF/jsps/"></property>
 	   <property name="suffix" value=".jsp"></property>
+	</bean> -->
+	
+	<bean id="tilesViesResolver" 
+	   class="org.springframework.web.servlet.view.tiles3.TilesViewResolver">
+	</bean>
+	
+	<bean id="tilesConfiguer"
+	   class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+	   <property name="definitions">
+	     <list>
+	       <value>/WEB-INF/layouts/default.xml</value>
+	     </list>
+	   </property>
 	</bean>
 	
 	<mvc:resources location="/resources/" mapping="/static/**"></mvc:resources>

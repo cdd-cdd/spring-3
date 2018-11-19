@@ -13,7 +13,7 @@ public class Offer {
 	
 	private int id;
 	
-	@Size(min=5, max=100, message="Name must be between 5 and 100 characters")
+	@Size(min=3, max=100, message="Name must be between 3 and 100 characters")
 	private String name;
 	@NotNull
 	//@Pattern(regexp=".*\\@.*\\..*", message="this does not appear a valid email address")

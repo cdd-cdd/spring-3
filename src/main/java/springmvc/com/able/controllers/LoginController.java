@@ -96,6 +96,7 @@ public class LoginController {
 		
 		return "admin";
 	}
-   //new UsernamePasswordAuthenticationFilter()
-	// new StandardPasswordEncoder()
+
+
+	
 }

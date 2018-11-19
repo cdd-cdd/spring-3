@@ -1,18 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<link href="${pageContext.request.contextPath}/static/css/main.css"
-	rel="stylesheet"></link>
-<title>create offer</title>
 
-</head>
-<body>
 
-	Under construction - create a new offer.
 	<form:form method="post"
 		action="${pageContext.request.contextPath}/docreate"
 		modelAttribute="offer">
@@ -43,5 +32,3 @@
 
 		</table>
 	</form:form>
-</body>
-</html>

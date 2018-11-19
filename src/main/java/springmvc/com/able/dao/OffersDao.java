@@ -95,5 +95,6 @@ public class OffersDao {
 
 		return jdbc.batchUpdate("insert into offers (id,name,text,email) values (:id, :name, :text, :email)", params);
 	}
+	
 
 }

@@ -13,7 +13,7 @@ import springmvc.com.able.validation.ValidEmail;
 public class User {
 	
 	@NotBlank(message="username cannot be blank")
-	@Size(min=8,max=15,message="")
+	@Size(min=3,max=15)
 	@Pattern(regexp="^\\w{8,}$", message="username can only consist of numbers,letters and underscore character")
 	private String username;
 	@NotBlank(message="password cannot be blank")
